@@ -1,7 +1,7 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Life of a red blood cell",
+    "Credits": "Created by Athea Reynolds",
+    "InitialLocation": "Blood Stream",
     "Locations": {
         "Heart": {
             "Body": "This is the heart",
@@ -17,7 +17,7 @@
             ]
         },
         "Lungs": {
-            "Body": "This are the lungs",
+            "Body": "These are the lungs",
             "Choices": [
                 {
                     "Text": "Go to heart",
@@ -26,7 +26,10 @@
             ]
         },
         "Blood Stream": {
-            "Body": "you are in the blood stream with",
+            "Body": "You are a red blood cell in the blood stream",
+            "None": " not carrying oxygen. Make your way to the lungs to collect some.",
+            "Carrying": "carrying oxygen. Deliver it to the vital organs of the body.",
+            "BodyDone": "you beat the game",
             "Choices": [
                 {
                     "Text": "Go to heart",
@@ -85,9 +88,6 @@
                     "Target": "Blood Stream"
                 }
             ]
-        },
-        "Beyond": {
-            "Body": "you did it"
         }
     }
 }
