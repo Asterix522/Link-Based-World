@@ -3,56 +3,91 @@
     "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
     "InitialLocation": "Kresge",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Heart": {
+            "Body": "This is the heart",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Go to Lungs",
+                    "Target": "Lungs"
+                },
+                {
+                    "Text": "Go to Blood Stream",
+                    "Target": "Blood Stream"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Lungs": {
+            "Body": "This are the lungs",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Go to heart",
+                    "Target": "Heart"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Blood Stream": {
+            "Body": "you are in the blood stream with",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Go to heart",
+                    "Target": "Heart"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Go to brain",
+                    "Target": "Brain"
+                },
+                {
+                    "Text": "Go to liver",
+                    "Target": "Liver"
+                },
+                {
+                    "Text": "Go to gut",
+                    "Target": "Gut"
+                },
+                {
+                    "Text": "Go to rest of body",
+                    "Target": "Rest of Body"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Brain": {
+            "Body": "this is the brain",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
+                    "Text": "Go to Blood Stream",
+                    "Target": "Blood Stream"
+                }
+            ]
+        },
+        "Liver": {
+            "Body": "liver",
+            "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Go to Blood Stream",
+                    "Target": "Blood Stream"
+                }
+            ]
+        },
+        "Gut": {
+            "Body": "this the gut",
+            "Choices": [
+                {
+                    "Text": "Go to Blood Stream",
+                    "Target": "Blood Stream"
+                }
+            ]
+        },
+        "Rest of Body": {
+            "Body": "this the rest of the body",
+            "Choices": [
+                {
+                    "Text": "Go to Blood Stream",
+                    "Target": "Blood Stream"
                 }
             ]
         },
         "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+            "Body": "you did it"
         }
     }
 }
