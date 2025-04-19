@@ -1,90 +1,102 @@
 {
-    "Title": "Life of a red blood cell",
-    "Credits": "Created by Athea Reynolds",
+    "Title": "Life of a Red Blood Cell",
     "InitialLocation": "Blood Stream",
     "Locations": {
         "Heart": {
-            "Body": "This is the heart",
+            "Body": "You're in the heart, the powerful pump of the circulatory system. The rhythmic beating surrounds you as you're pushed through chambers.",
             "Choices": [
                 {
-                    "Text": "Go to Lungs",
+                    "Text": "Get pumped to the Lungs",
                     "Target": "Lungs"
                 },
                 {
-                    "Text": "Go to Blood Stream",
+                    "Text": "Enter the Blood Stream",
                     "Target": "Blood Stream"
                 }
             ]
         },
         "Lungs": {
-            "Body": "These are the lungs",
+            "Body": "You've arrived in the delicate alveoli of the lungs. All around you, oxygen molecules are binding to hemoglobin.",
             "Choices": [
                 {
-                    "Text": "Go to heart",
+                    "Text": "Return to the heart",
                     "Target": "Heart"
                 }
             ]
         },
         "Blood Stream": {
-            "Body": "You are a red blood cell in the blood stream",
-            "None": " not carrying oxygen. Make your way to the lungs to collect some.",
-            "Carrying": "carrying oxygen. Deliver it to the vital organs of the body.",
-            "BodyDone": "you beat the game",
+            "Body": "You're flowing through the blood vessels of the body. ",
+            "None": "Your hemoglobin is empty - you need to visit the lungs to pick up oxygen.",
+            "Carrying": "Your hemoglobin is saturated with oxygen molecules. Look for organs that need oxygen delivery!",
             "Choices": [
                 {
-                    "Text": "Go to heart",
+                    "Text": "Enter the Heart",
                     "Target": "Heart"
                 },
                 {
-                    "Text": "Go to brain",
+                    "Text": "Deliver oxygen to the Brain",
                     "Target": "Brain"
                 },
                 {
-                    "Text": "Go to liver",
+                    "Text": "Deliver oxygen to the Liver",
                     "Target": "Liver"
                 },
                 {
-                    "Text": "Go to gut",
+                    "Text": "Deliver oxygen to the Gut",
                     "Target": "Gut"
                 },
                 {
-                    "Text": "Go to rest of body",
+                    "Text": "Deliver oxygen to the rest of the body",
                     "Target": "Rest of Body"
                 }
             ]
         },
         "Brain": {
-            "Body": "this is the brain",
+            "Body": "You've reached the brain, the body's control center. Neurons eagerly accept your oxygen payload.",
             "Choices": [
                 {
-                    "Text": "Go to Blood Stream",
+                    "Text": "Return to circulation",
                     "Target": "Blood Stream"
                 }
             ]
         },
         "Liver": {
-            "Body": "liver",
+            "Body": "The liver's immune cells (Kupffer cells) watch carefully...",
+            "Mechanism": {
+                "PossibleEvents": [
+                    "The liver groans ominously",
+                    "Nothing happens",
+                    "Kupffer cells glare at you suspiciously",
+                    "You hear a mysterious gurgling sound",
+                    "Bile droplets splash nearby"
+                ]
+            },
             "Choices": [
                 {
-                    "Text": "Go to Blood Stream",
+                    "Text": "Prod the Liver",
+                    "Action": "prod"
+                },
+                {
+                   
+                    "Text": "Return to Blood Stream",
                     "Target": "Blood Stream"
                 }
             ]
         },
         "Gut": {
-            "Body": "this the gut",
+            "Body": "You've arrived in the intestines. The digestive system needs oxygen to function properly.",
             "Choices": [
                 {
-                    "Text": "Go to Blood Stream",
+                    "Text": "Return to circulation",
                     "Target": "Blood Stream"
                 }
             ]
         },
         "Rest of Body": {
-            "Body": "this the rest of the body",
+            "Body": "You're delivering oxygen to muscles and other tissues throughout the body.",
             "Choices": [
                 {
-                    "Text": "Go to Blood Stream",
+                    "Text": "Return to circulation",
                     "Target": "Blood Stream"
                 }
             ]

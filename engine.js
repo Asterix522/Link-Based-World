@@ -5,9 +5,18 @@ class Engine {
     }
 
     constructor(firstSceneClass, storyDataUrl) {
-
         this.firstSceneClass = firstSceneClass;
         this.storyDataUrl = storyDataUrl;
+        
+        //Game state
+        this.justDeliveredOxygen = false;
+        this.hasOxygen = false;
+        this.organsOxygenated = {
+            Brain: false,
+            Liver: false,
+            Gut: false,
+            "Rest of Body": false
+        };
 
         this.header = document.body.appendChild(document.createElement("h1"));
         this.output = document.body.appendChild(document.createElement("div"));
@@ -24,6 +33,9 @@ class Engine {
     }
 
     gotoScene(sceneClass, data) {
+        if (data === "Liver") {
+            sceneClass = LiverMechanism;
+        }
         this.scene = new sceneClass(this);
         this.scene.create(data);
     }
@@ -48,6 +60,14 @@ class Engine {
         let div = document.createElement("div");
         div.innerHTML = msg;
         this.output.appendChild(div);
+    }
+
+    checkWinCondition() {
+        //Check if all organs have been oxygenated
+        for (let organ in this.organsOxygenated) {
+            if (!this.organsOxygenated[organ]) return false;
+        }
+        return true;
     }
 }
 
